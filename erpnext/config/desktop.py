@@ -41,7 +41,7 @@ def get_data():
 			"color": "#2ecc71",
 			"icon": "icon-group",
 			"icon": "octicon octicon-organization",
-			"label": _("Human Resources"),
+			"label": _("Recursos Humanos"),
 			"type": "module"
 		},
 		{
