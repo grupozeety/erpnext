@@ -80,6 +80,6 @@ def get_data():
 			"icon": "octicon octicon-device-camera-video",
 			"type": "module",
 			"is_help": True,
-			"label": _("Learn")
+			"label": _("Aprender")
 		}
 	]
