@@ -58,7 +58,7 @@ class Item(WebsiteGenerator):
 		imagenProducto=frappe.db.get_value(self.doctype, self.name, "website_image")
 		
 		frappe.msgprint(_("Se ha insertado: {0}, {1}, {2}, {3}, {4}")
-					.format(self.website_image, self.name, self.description, self.code, companyName))	
+					.format(self.website_image, self.name, self.description, self.item_code, companyName))	
 		
 		
 	def validate(self):
