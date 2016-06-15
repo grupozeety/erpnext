@@ -60,7 +60,7 @@ class Item(WebsiteGenerator):
 				companyName+
 				self.item_code+
 				self.item_name+
-				self.item_description+
+				self.description+
 				imagenProducto), raise_exception=1)
 		
 	def validate(self):
