@@ -27,8 +27,7 @@ class Item(WebsiteGenerator):
 
 	def onload(self):
 		super(Item, self).onload()
-		self.get("__onload").sle_exists = self.check_if_sle_exists()
-		frappe.msgprint(_("Bueno vamos a ver!!!").format(self.website_image))
+		self.get("__onload").sle_exists = self.check_if_sle_exists()	
 
 	def autoname(self):
 		if frappe.db.get_default("item_naming_by")=="Naming Series":
@@ -52,7 +51,18 @@ class Item(WebsiteGenerator):
 	def before_insert(self):
 		if self.is_sales_item=="Yes":
 			self.publish_in_hub = 1
-
+			
+	def after_insert(self):	
+		
+		companyName=frappe.db.get_default("company_name")
+		imagenProducto=frappe.db.get_value(self.doctype, self.name, "website_image")			
+		msgprint(_("Se ha insertado:"+
+				companyName+
+				self.item_code+
+				self.item_name+
+				self.item_description+
+				imagenProducto), raise_exception=1)
+		
 	def validate(self):
 		super(Item, self).validate()
 
