@@ -28,7 +28,7 @@ class Item(WebsiteGenerator):
 	def onload(self):
 		super(Item, self).onload()
 		self.get("__onload").sle_exists = self.check_if_sle_exists()
-		show_alert('Bienvenido a Frappe!!!', 5);
+		frappe.msgprint(_("Bueno vamos a ver!!!").format(self.website_image))
 
 	def autoname(self):
 		if frappe.db.get_default("item_naming_by")=="Naming Series":
