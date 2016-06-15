@@ -55,12 +55,11 @@ class Item(WebsiteGenerator):
 	def after_insert(self):	
 		
 		companyName=frappe.db.get_default("company_name")
-		"""imagenProducto=frappe.db.get_value(self.doctype, self.name, "website_image")"""			
-		msgprint(_("Se ha insertado:"+
-				companyName+
-				self.item_code+
-				self.item_name+
-				self.description), raise_exception=1)
+		imagenProducto=frappe.db.get_value(self.doctype, self.name, "website_image")
+		
+		frappe.msgprint(_("Se ha insertado: {0}, {1}, {2}, {3}, {4}")
+					.format(self.website_image, self.name, self.description, self.code, companyName))	
+		
 		
 	def validate(self):
 		super(Item, self).validate()
