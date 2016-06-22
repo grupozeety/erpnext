@@ -195,6 +195,21 @@ def get_data():
 					"name": "Brand",
 					"description": _("Brand master.")
 				},
+				{
+					"type": "doctype",
+					"name": "Categorías de Productos",
+					"description": _("Categorías de Productos.")
+				},
+				{
+					"type": "doctype",
+					"name": "Segmentos de Productos",
+					"description": _("Categorías de Productos.")
+				},
+				{
+					"type": "doctype",
+					"name": "Subcategorías de Productos",
+					"description": _("Categorías de Productos.")
+				},
 			]
 		},
 		{
