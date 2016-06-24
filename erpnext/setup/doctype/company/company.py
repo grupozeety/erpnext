@@ -11,6 +11,8 @@ import frappe.defaults
 
 from frappe.model.document import Document
 
+import requests
+
 class Company(Document):
 	def onload(self):
 		self.get("__onload").transactions_exist = self.check_if_transactions_exist()
