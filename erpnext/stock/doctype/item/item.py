@@ -458,7 +458,7 @@ class Item(WebsiteGenerator):
 		registro = {'nombrePyme': nombrePyme, 'nombreProducto': nombreProducto,'descripcion':descripcion,'imagen':imagen,'precio':precio, 'stock':stock, 'categoria':categoria, 'segmento':segmento,'subcategoria':subcategoria}		
 		r = requests.post(url, params=registro)
 		"""frappe.msgprint (r.json())"""	
-		frappe.msgprint(r.url)		
+		"""frappe.msgprint(r.url)"""		
 			
 		
 	def crearProducto(self):		
@@ -476,8 +476,8 @@ class Item(WebsiteGenerator):
 		
 		registro = {'empresa': nombrePyme, 'nombre': nombreProducto,'descripcion':descripcion,'precio':precio, 'categoria':categoria, 'segmento':segmento,'subcategoria':subcategoria}		
 		r = requests.post(url, params=registro)
-		frappe.msgprint(r.url)
-		frappe.msgprint (r.json())
+		"""frappe.msgprint(r.url)"""
+		"""frappe.msgprint (r.json())"""
 	
 	
 	def update_item_price(self):
