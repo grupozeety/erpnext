@@ -95,7 +95,7 @@ class Item(WebsiteGenerator):
 		self.update_item_price()
 		self.update_variants()
 		self.update_template_item()
-		self.sincronizarProducto(self)
+		self.sincronizarProducto()
 
 	def validate_website_image(self):
 		"""Validate if the website image is a public file"""
@@ -431,6 +431,12 @@ class Item(WebsiteGenerator):
 			where item_code = %s""", self.name)
 		return sle and 'exists' or 'not exists'
 
+	
+	def validate_name_with_item_group(self):
+		# causes problem with tree build
+		if frappe.db.exists("Item Group", self.name):
+			frappe.throw(_("An Item Group exists with same name, please change the item name or rename the item group"))
+
 	def sincronizarProducto(self):		
 		
 		nombrePyme=frappe.db.get_value("Global Defaults", None, "default_company")
@@ -452,8 +458,7 @@ class Item(WebsiteGenerator):
 		registro = {'nombrePyme': nombrePyme, 'nombreProducto': nombreProducto,'descripcion':descripcion,'imagen':imagen,'precio':precio, 'stock':stock, 'categoria':categoria, 'segmento':segmento,'subcategoria':subcategoria}		
 		r = requests.post(url, params=registro)
 		"""frappe.msgprint (r.json())	
-		frappe.msgprint(r.url) """
-		
+		frappe.msgprint(r.url) """		
 			
 		
 	def crearProducto(self):		
@@ -475,11 +480,6 @@ class Item(WebsiteGenerator):
 		frappe.msgprint (r.json())
 	
 	
-	def validate_name_with_item_group(self):
-		# causes problem with tree build
-		if frappe.db.exists("Item Group", self.name):
-			frappe.throw(_("An Item Group exists with same name, please change the item name or rename the item group"))
-
 	def update_item_price(self):
 		frappe.db.sql("""update `tabItem Price` set item_name=%s,
 			item_description=%s, modified=NOW() where item_code=%s""",
