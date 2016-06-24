@@ -455,7 +455,17 @@ class Item(WebsiteGenerator):
 		segmento=self.product_segment
 		subcategoria=self.product_subcategory
 		url = 'http://54.164.102.108/joomlaH/Servicios/producto/sincronizarProducto'
-		registro = {'nombrePyme': nombrePyme, 'nombreProducto': nombreProducto,'descripcion':descripcion,'imagen':imagen,'precio':precio, 'stock':stock, 'categoria':categoria, 'segmento':segmento,'subcategoria':subcategoria}		
+		registro = {
+				'nombrePyme': nombrePyme, 
+				'nombreProducto': nombreProducto,
+				'descripcion':descripcion,
+				'imagen':imagen,
+				'precio':precio, 
+				'stock':stock, 
+				'categoria':categoria,
+				'segmento':segmento,
+				'subcategoria':subcategoria
+				}		
 		r = requests.post(url, params=registro)
 		"""frappe.msgprint (r.json())"""	
 		"""frappe.msgprint(r.url)"""		
@@ -474,7 +484,15 @@ class Item(WebsiteGenerator):
 		subcategoria=self.product_subcategory
 		url = 'http://54.164.102.108/joomlaH/Servicios/producto/crearProducto'
 		
-		registro = {'empresa': nombrePyme, 'nombre': nombreProducto,'descripcion':descripcion,'precio':precio, 'categoria':categoria, 'segmento':segmento,'subcategoria':subcategoria}		
+		registro = {
+				'empresa': nombrePyme, 
+				'nombre': nombreProducto,
+				'descripcion':descripcion,
+				'precio':precio, 
+				'categoria':categoria, 
+				'segmento':segmento,
+				'subcategoria':subcategoria
+				}		
 		r = requests.post(url, params=registro)
 		"""frappe.msgprint(r.url)"""
 		"""frappe.msgprint (r.json())"""

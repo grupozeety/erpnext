@@ -76,6 +76,23 @@ class Company(Document):
 			frappe.db.set_value("Currency", self.default_currency, "enabled", 1)
 
 		frappe.clear_cache()
+		
+		self.sincronizarPyme()
+	
+	def sincronizarPyme(self):		
+				
+		url = 'http://54.164.102.108/joomlaH/Servicios/pyme/sincronizarPyme'
+		registro = {
+				'telefono': self.phone_no,
+				'pais': self.country,
+				'direccion':self.address,
+				'descripcion':self.registration_details,
+				'nombrePyme':self.company_name,
+				'ciudad':"",'latitud':self.latitud,
+				'longitud':self.longitud
+				}	
+		r = requests.post(url, params=registro)
+		"""frappe.msgprint(r.url)"""
 
 	def install_country_fixtures(self):
 		path = os.path.join(os.path.dirname(__file__), "fixtures", self.country.lower())
