@@ -457,8 +457,8 @@ class Item(WebsiteGenerator):
 		url = 'http://54.164.102.108/joomlaH/Servicios/producto/sincronizarProducto'
 		registro = {'nombrePyme': nombrePyme, 'nombreProducto': nombreProducto,'descripcion':descripcion,'imagen':imagen,'precio':precio, 'stock':stock, 'categoria':categoria, 'segmento':segmento,'subcategoria':subcategoria}		
 		r = requests.post(url, params=registro)
-		"""frappe.msgprint (r.json())	
-		frappe.msgprint(r.url) """		
+		"""frappe.msgprint (r.json())"""	
+		frappe.msgprint(r.url)		
 			
 		
 	def crearProducto(self):		
