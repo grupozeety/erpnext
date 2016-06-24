@@ -488,7 +488,7 @@ class Item(WebsiteGenerator):
 		nombreProducto=	self.item_name
 		descripcion=self.description
 		
-		"""Verificar que efectivamente se tenga una cádena válida en la imagen"""
+		"""Verificar que efectivamente se tenga una cadena valida en la imagen"""
 		if frappe.db.get_value(self.doctype, self.name, "website_image")!= None:
 			imagen=frappe.utils.get_url()+"/files/"+frappe.db.get_value(self.doctype, self.name, "website_image")
 		else:
