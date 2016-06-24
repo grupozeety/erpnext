@@ -445,7 +445,7 @@ class Item(WebsiteGenerator):
 		
 		"""Verificar que efectivamente se tenga una cadena valida en la imagen"""
 		if frappe.db.get_value(self.doctype, self.name, "website_image")!= None:
-			imagen=frappe.utils.get_url()+"/files/"+frappe.db.get_value(self.doctype, self.name, "website_image")
+			imagen=frappe.utils.get_url()+frappe.db.get_value(self.doctype, self.name, "website_image")
 		else:
 			imagen=''
 			
@@ -457,7 +457,7 @@ class Item(WebsiteGenerator):
 		url = 'http://54.164.102.108/joomlaH/Servicios/producto/sincronizarProducto'
 		registro = {'nombrePyme': nombrePyme, 'nombreProducto': nombreProducto,'descripcion':descripcion,'imagen':imagen,'precio':precio, 'stock':stock, 'categoria':categoria, 'segmento':segmento,'subcategoria':subcategoria}		
 		r = requests.post(url, params=registro)
-		"""frappe.msgprint (r.json())"""	
+		frappe.msgprint (r.json())	
 		frappe.msgprint(r.url)		
 			
 		
