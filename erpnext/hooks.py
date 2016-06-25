@@ -50,7 +50,8 @@ fixtures = [
 		"Company",
 		"Web Form",
 		"Custom Field",
-		"Custom Script"
+		"Custom Script",
+		"ejemplo"
 		]
 
 website_generators = ["Item Group", "Item", "Sales Partner", "Job Opening"]
