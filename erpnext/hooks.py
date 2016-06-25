@@ -43,9 +43,9 @@ calendars = ["Task", "Production Order", "Time Log", "Leave Application", "Sales
 
 
 fixtures = [
-		"Categorías de Productos", 
+		"Categorias de Productos", 
 		"Segmentos de Productos",
-		"Subcategorías de Productos",
+		"Subcategorias de Productos",
 		"Item",
 		"Company",
 		"Web Form",
