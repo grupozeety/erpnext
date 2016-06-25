@@ -49,30 +49,13 @@ class ItemPrice(Document):
 	
 		nombrePyme=frappe.db.get_value("Global Defaults", None, "default_company")
 		nombreProducto=	self.item_name
-		descripcion=self.description
+		precio=self.price_list_rate
 		
-		"""Verificar que efectivamente se tenga una cadena valida en la imagen"""
-		if frappe.db.get_value(self.doctype, self.name, "website_image")!= None:
-			imagen=frappe.utils.get_url()+frappe.db.get_value(self.doctype, self.name, "website_image")
-		else:
-			imagen=''
-			
-		precio=0
-		stock=0
-		categoria=self.product_category
-		segmento=self.product_segment
-		subcategoria=self.product_subcategory
 		url = 'http://54.164.102.108/joomlaH/Servicios/producto/sincronizarProducto'
 		registro = {
 				'nombrePyme': nombrePyme, 
 				'nombreProducto': nombreProducto,
-				'descripcion':descripcion,
-				'imagen':imagen,
-				'precio':precio, 
-				'stock':stock, 
-				'categoria':categoria,
-				'segmento':segmento,
-				'subcategoria':subcategoria
+				'precio':precio
 				}		
 		r = requests.post(url, params=registro)
 		"""frappe.msgprint (r.json())"""	
