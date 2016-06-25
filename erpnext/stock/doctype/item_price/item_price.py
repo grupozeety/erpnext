@@ -8,6 +8,7 @@ from frappe import throw, _
 class ItemPriceDuplicateItem(frappe.ValidationError): pass
 
 from frappe.model.document import Document
+import requests
 
 class ItemPrice(Document):
 	def validate(self):
