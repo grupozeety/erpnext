@@ -42,7 +42,17 @@ email_append_to = ["Job Applicant", "Opportunity", "Issue"]
 calendars = ["Task", "Production Order", "Time Log", "Leave Application", "Sales Order", "Holiday List"]
 
 
-fixtures = ["Categorías de Productos"]
+fixtures = [
+		"Categorías de Productos", 
+		"Segmentos de Productos",
+		"Subcategorías de Productos",
+		"item",
+		"company",
+		"Web Form",
+		"Custom Field",
+		"Custom Script"
+		]
+
 website_generators = ["Item Group", "Item", "Sales Partner", "Job Opening"]
 
 website_context = {
