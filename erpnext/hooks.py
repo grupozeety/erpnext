@@ -46,8 +46,8 @@ fixtures = [
 		"Categorías de Productos", 
 		"Segmentos de Productos",
 		"Subcategorías de Productos",
-		"item",
-		"company",
+		"Item",
+		"Company",
 		"Web Form",
 		"Custom Field",
 		"Custom Script"
