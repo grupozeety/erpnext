@@ -45,7 +45,7 @@ class ItemPrice(Document):
 	def on_update(self):
 		self.sincronizarPrecio()
 	
-	def sincronizarProducto(self):		
+	def sincronizarPrecio(self):		
 	
 		nombrePyme=frappe.db.get_value("Global Defaults", None, "default_company")
 		nombreProducto=	self.item_name
