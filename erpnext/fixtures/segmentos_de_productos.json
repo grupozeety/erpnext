@@ -1,0 +1,42 @@
+[
+ {
+  "categoria_producto": "Turismo de Naturaleza", 
+  "docstatus": 0, 
+  "doctype": "Segmentos de Productos", 
+  "modified": "2016-06-21 20:11:51.328344", 
+  "name": "Ecoturismo", 
+  "segmento_producto": "Ecoturismo"
+ }, 
+ {
+  "categoria_producto": "Turismo de Naturaleza", 
+  "docstatus": 0, 
+  "doctype": "Segmentos de Productos", 
+  "modified": "2016-06-21 20:12:22.340503", 
+  "name": "Turismo de Aventura", 
+  "segmento_producto": "Turismo de Aventura"
+ }, 
+ {
+  "categoria_producto": "Turismo de Naturaleza", 
+  "docstatus": 0, 
+  "doctype": "Segmentos de Productos", 
+  "modified": "2016-06-21 20:13:01.032020", 
+  "name": "Turismo Rural", 
+  "segmento_producto": "Turismo Rural"
+ }, 
+ {
+  "categoria_producto": "Turismo Sol y Veraneo", 
+  "docstatus": 0, 
+  "doctype": "Segmentos de Productos", 
+  "modified": "2016-06-22 10:56:41.199957", 
+  "name": "Prueba 1", 
+  "segmento_producto": "Prueba 1"
+ }, 
+ {
+  "categoria_producto": "Cultural", 
+  "docstatus": 0, 
+  "doctype": "Segmentos de Productos", 
+  "modified": "2016-06-23 19:44:24.441555", 
+  "name": "Gastronom\u00eda", 
+  "segmento_producto": "Gastronom\u00eda"
+ }
+]
