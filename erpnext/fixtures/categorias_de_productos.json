@@ -1,0 +1,50 @@
+[
+ {
+  "categoria_producto": null, 
+  "descripcion_categoria": null, 
+  "docstatus": 0, 
+  "doctype": "Categorias de Productos", 
+  "modified": "2016-06-21 20:03:06.846061", 
+  "name": "Turismo de Naturaleza"
+ }, 
+ {
+  "categoria_producto": "Cultural", 
+  "descripcion_categoria": null, 
+  "docstatus": 0, 
+  "doctype": "Categorias de Productos", 
+  "modified": "2016-06-23 19:36:50.705617", 
+  "name": "Turismo Cultural"
+ }, 
+ {
+  "categoria_producto": null, 
+  "descripcion_categoria": null, 
+  "docstatus": 0, 
+  "doctype": "Categorias de Productos", 
+  "modified": "2016-06-21 20:08:40.432242", 
+  "name": "Turismo Salud y Bienestar"
+ }, 
+ {
+  "categoria_producto": null, 
+  "descripcion_categoria": null, 
+  "docstatus": 0, 
+  "doctype": "Categorias de Productos", 
+  "modified": "2016-06-21 20:08:58.119619", 
+  "name": "Turismo Negocios"
+ }, 
+ {
+  "categoria_producto": null, 
+  "descripcion_categoria": null, 
+  "docstatus": 0, 
+  "doctype": "Categorias de Productos", 
+  "modified": "2016-06-21 20:09:20.600660", 
+  "name": "Turismo Sol y Veraneo"
+ }, 
+ {
+  "categoria_producto": "Cultural", 
+  "descripcion_categoria": null, 
+  "docstatus": 0, 
+  "doctype": "Categorias de Productos", 
+  "modified": "2016-06-23 19:43:32.327881", 
+  "name": "Cultural"
+ }
+]
