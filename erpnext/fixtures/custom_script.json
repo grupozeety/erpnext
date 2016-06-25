@@ -2,7 +2,7 @@
  {
   "docstatus": 0, 
   "doctype": "Custom Script", 
-  "dt": "Subcategor\u00edas de Productos", 
+  "dt": "Subcategorias de Productos", 
   "modified": "2016-06-21 23:28:13.779468", 
   "name": "Subcategor\u00edas de Productos-Client", 
   "script": "cur_frm.fields_dict['segmento_producto'].get_query = function(doc) {\n\treturn {\n\t\tfilters: {\n\t\t\t\"categoria_producto\": doc.categoria_producto\n\t\t}\n\t}\n}", 
