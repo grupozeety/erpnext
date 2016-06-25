@@ -43,6 +43,7 @@ calendars = ["Task", "Production Order", "Time Log", "Leave Application", "Sales
 fixtures = ["Web Form"]
 fixtures = ["Custom Field"]
 fixtures = ["Custom Script"]
+fixtures = ["doctype"]
 
 website_generators = ["Item Group", "Item", "Sales Partner", "Job Opening"]
 
