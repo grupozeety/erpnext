@@ -43,14 +43,6 @@ calendars = ["Task", "Production Order", "Time Log", "Leave Application", "Sales
 
 
 fixtures = ["Categorías de Productos"]
-fixtures = ["Segmentos de Productos"]
-fixtures = ["Subcategorías de Productos"]
-fixtures = ["item"]
-fixtures = ["company"]
-fixtures = ["Web Form"]
-fixtures = ["Custom Field"]
-fixtures = ["Custom Script"]
-
 website_generators = ["Item Group", "Item", "Sales Partner", "Job Opening"]
 
 website_context = {
