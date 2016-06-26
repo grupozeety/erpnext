@@ -468,7 +468,7 @@ class Item(WebsiteGenerator):
 		r = requests.post(url, params=registro)
 		"""frappe.msgprint (r.json())"""	
 		"""frappe.msgprint(r.url)"""
-		frappe.msgprint(frappe.db.get_value("Website Settings", "Website Settings", "subdomain"))		
+		frappe.msgprint(frappe.local.conf.nginx_port)		
 			
 		
 	def crearProducto(self):		
