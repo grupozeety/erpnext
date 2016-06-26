@@ -444,7 +444,7 @@ class Item(WebsiteGenerator):
 		
 		"""Verificar que efectivamente se tenga una cadena valida en la imagen"""
 		if frappe.db.get_value(self.doctype, self.name, "website_image")!= None:
-			imagen=frappe.utils.get_url()+frappe.db.get_value(self.doctype, self.name, "website_image")
+			imagen=frappe.utils.get_url()+':'+frappe.local.conf.nginx_port+frappe.db.get_value(self.doctype, self.name, "website_image")
 		else:
 			imagen=''
 			
@@ -468,7 +468,7 @@ class Item(WebsiteGenerator):
 		r = requests.post(url, params=registro)
 		"""frappe.msgprint (r.json())"""	
 		"""frappe.msgprint(r.url)"""
-		frappe.msgprint(frappe.local.conf.nginx_port)		
+				
 			
 		
 	def crearProducto(self):		
