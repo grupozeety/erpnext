@@ -28,8 +28,7 @@ class Item(WebsiteGenerator):
 
 	def onload(self):
 		super(Item, self).onload()
-		self.get("__onload").sle_exists = self.check_if_sle_exists()
-		frappe.msgprint(frappe.local.conf.host_name)	
+		self.get("__onload").sle_exists = self.check_if_sle_exists()		
 
 	def autoname(self):
 		if frappe.db.get_default("item_naming_by")=="Naming Series":
@@ -55,7 +54,7 @@ class Item(WebsiteGenerator):
 			self.publish_in_hub = 1
 			
 	def after_insert(self):		
-
+		frappe.msgprint(frappe.local.conf.host_name)	
 		self.crearProducto()
 	
 	def validate(self):
