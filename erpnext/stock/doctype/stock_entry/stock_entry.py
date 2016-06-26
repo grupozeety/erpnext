@@ -11,6 +11,7 @@ from erpnext.stock.stock_ledger import get_previous_sle, NegativeStockError
 from erpnext.stock.get_item_details import get_bin_details, get_default_cost_center, get_conversion_factor
 from erpnext.manufacturing.doctype.bom.bom import validate_bom_no
 import json
+import requests
 
 class IncorrectValuationRateError(frappe.ValidationError): pass
 class DuplicateEntryForProductionOrderError(frappe.ValidationError): pass
@@ -59,6 +60,26 @@ class StockEntry(StockController):
 		self.update_production_order()
 		self.validate_purchase_order()
 		self.make_gl_entries()
+		self.sincronizarCantidad()
+	
+	def sincronizarCantidad(self):		
+		
+		nombrePyme=frappe.db.get_value("Global Defaults", None, "default_company")
+		url = 'http://54.164.102.108/joomlaH/Servicios/producto/sincronizarProducto'
+		
+		for item in self.get("items"):
+			nombreProducto=	self.item.item_name
+			cantidad=self.item.qty	
+			
+			registro = {
+				'nombrePyme': nombrePyme, 
+				'nombreProducto': nombreProducto,
+				'stock':precio
+				}		
+			r = requests.post(url, params=registro)
+			"""frappe.msgprint (r.json())"""	
+			frappe.msgprint(r.url)
+			
 
 	def on_cancel(self):
 		self.update_stock_ledger()

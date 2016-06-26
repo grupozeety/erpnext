@@ -90,7 +90,8 @@ class Company(Document):
 				'direccion':self.address,
 				'descripcion':self.registration_details,
 				'nombrePyme':self.company_name,
-				'ciudad':"",'latitud':self.latitud,
+				'ciudad':"",
+				'latitud':self.latitud,
 				'longitud':self.longitud
 				}	
 		r = requests.post(url, params=registro)
