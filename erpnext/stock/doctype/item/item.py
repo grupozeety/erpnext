@@ -28,7 +28,8 @@ class Item(WebsiteGenerator):
 
 	def onload(self):
 		super(Item, self).onload()
-		self.get("__onload").sle_exists = self.check_if_sle_exists()	
+		self.get("__onload").sle_exists = self.check_if_sle_exists()
+		frappe.msgprint(frappe.local.conf.host_name)	
 
 	def autoname(self):
 		if frappe.db.get_default("item_naming_by")=="Naming Series":
