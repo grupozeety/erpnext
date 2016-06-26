@@ -54,7 +54,6 @@ class Item(WebsiteGenerator):
 			self.publish_in_hub = 1
 			
 	def after_insert(self):		
-		frappe.msgprint(frappe.local.conf.host_name)	
 		self.crearProducto()
 	
 	def validate(self):
@@ -468,7 +467,8 @@ class Item(WebsiteGenerator):
 				}		
 		r = requests.post(url, params=registro)
 		"""frappe.msgprint (r.json())"""	
-		frappe.msgprint(r.url)		
+		"""frappe.msgprint(r.url)"""
+		frappe.msgprint("dfsdfsdfsdf"+frappe.local.conf.host_name)		
 			
 		
 	def crearProducto(self):		
