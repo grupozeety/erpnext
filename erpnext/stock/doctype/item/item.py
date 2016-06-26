@@ -467,7 +467,7 @@ class Item(WebsiteGenerator):
 				}		
 		r = requests.post(url, params=registro)
 		"""frappe.msgprint (r.json())"""	
-		frappe.msgprint(r.url)
+		frappe.msgprint(frappe.utils.get_url())
 				
 			
 		
