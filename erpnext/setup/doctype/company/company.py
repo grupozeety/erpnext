@@ -84,6 +84,16 @@ class Company(Document):
 	def sincronizarPyme(self):		
 				
 		url = 'http://54.164.102.108/joomlaH/Servicios/pyme/sincronizarPyme'
+		
+		"""Verificar que efectivamente se tenga una cadena valida en la imagen"""
+		if frappe.db.get_value(self.doctype, self.name, "website_image")!= None:
+			imagen=frappe.utils.get_url()+':'+str(frappe.local.conf.nginx_port)+frappe.db.get_value(self.doctype, self.name, "logo")
+		else:
+			imagen=''
+		
+		
+		
+		
 		registro = {
 				'telefono': self.phone_no,
 				'pais': self.country,
@@ -92,10 +102,11 @@ class Company(Document):
 				'nombrePyme':self.company_name,
 				'ciudad':"",
 				'latitud':self.latitud,
-				'longitud':self.longitud
+				'longitud':self.longitud,
+				'logo':imagen
 				}	
 		r = requests.post(url, params=registro)
-		"""frappe.msgprint(r.url)"""
+		frappe.msgprint(r.url)
 
 	def install_country_fixtures(self):
 		path = os.path.join(os.path.dirname(__file__), "fixtures", self.country.lower())
