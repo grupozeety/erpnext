@@ -79,9 +79,9 @@ class Company(Document):
 
 		frappe.clear_cache()
 		
-		self.sincronizarPyme()
+		self.sincronizarCompany()
 	
-	def sincronizarPyme(self):		
+	def sincronizarCompany(self):		
 				
 		url = 'http://54.164.102.108/joomlaH/Servicios/pyme/sincronizarPyme'
 		
@@ -90,9 +90,6 @@ class Company(Document):
 			imagen=frappe.utils.get_url()+':'+str(frappe.local.conf.nginx_port)+frappe.db.get_value(self.doctype, self.name, "logo")
 		else:
 			imagen=''
-		
-		
-		
 		
 		registro = {
 				'telefono': self.phone_no,
