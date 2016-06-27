@@ -95,7 +95,7 @@ class Company(Document):
 				'telefono': self.phone_no,
 				'pais': self.country,
 				'direccion':self.address,
-				'descripcion':self.registration_details,
+				'descripcion':self.description,
 				'nombrePyme':self.company_name,
 				'ciudad':"",
 				'latitud':self.latitud,
