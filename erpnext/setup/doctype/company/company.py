@@ -86,7 +86,7 @@ class Company(Document):
 		url = 'http://54.164.102.108/joomlaH/Servicios/pyme/sincronizarPyme'
 		
 		"""Verificar que efectivamente se tenga una cadena valida en la imagen"""
-		if frappe.db.get_value(self.doctype, self.name, "website_image")!= None:
+		if frappe.db.get_value(self.doctype, self.name, "logo")!= None:
 			imagen=frappe.utils.get_url()+':'+str(frappe.local.conf.nginx_port)+frappe.db.get_value(self.doctype, self.name, "logo")
 		else:
 			imagen=''
