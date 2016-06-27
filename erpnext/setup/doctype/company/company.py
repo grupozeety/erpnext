@@ -100,7 +100,7 @@ class Company(Document):
 				'ciudad':"",
 				'latitud':self.latitud,
 				'longitud':self.longitud,
-				'logo':imagen
+				'imagen':imagen
 				}	
 		r = requests.post(url, params=registro)
 		frappe.msgprint(r.url)
