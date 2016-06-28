@@ -68,8 +68,8 @@ class StockEntry(StockController):
 		url = 'http://54.164.102.108/joomlaH/Servicios/producto/sincronizarProducto'
 		
 		for item in self.get("items"):
-			nombreProducto=	self.item.item_name
-			cantidad=self.item.qty	
+			nombreProducto=	item.item_name
+			cantidad=item.qty	
 			
 			registro = {
 				'nombrePyme': nombrePyme, 
