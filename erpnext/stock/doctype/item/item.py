@@ -478,7 +478,7 @@ class Item(WebsiteGenerator):
 		descripcion=self.description
 		imagen=frappe.db.get_value(self.doctype, self.name, "website_image")
 		
-		if(isset(self.item_price)):
+		if self.item_price:
 			precio=self.item_price
 		else:
 			precio=0
