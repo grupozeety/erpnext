@@ -5,6 +5,7 @@ frappe.pages['setup-wizard'].on_page_load = function(wrapper) {
 		frappe.set_route("desk");
 		return;
 	}
+	alert('si me cargo');
 };
 
 function load_erpnext_slides() {
@@ -14,12 +15,12 @@ function load_erpnext_slides() {
 			title: __("The Organization"),
 			icon: "icon-building",
 			fields: [
-				{fieldname:'company_name', label: __('Company Name'), fieldtype:'Data',
-					placeholder: __('e.g. "My Company LLC"'), default:get_url_arg('nombreEmpresa'), reqd:1},
+				{fieldname:'company_name', label: __('Company Name'), fieldtype:'Data', reqd:1,
+					placeholder: __('e.g. "My Company LLC"')},
 				{fieldname:'company_abbr', label: __('Company Abbreviation'), fieldtype:'Data',
-					description: __('Max 5 characters'), placeholder: __('e.g. "MC"'), default:get_url_arg('abreviatura'), reqd:1},
+					description: __('Max 5 characters'), placeholder: __('e.g. "MC"'), reqd:1},
 				{fieldname:'company_tagline', label: __('What does it do?'), fieldtype:'Data',
-					placeholder:__('e.g. "Build tools for builders"'), default:get_url_arg('descripcion'), reqd:1},
+					placeholder:__('e.g. "Build tools for builders"'), reqd:1},
 				{fieldname:'bank_account', label: __('Bank Account'), fieldtype:'Data',
 					placeholder: __('e.g. "XYZ National Bank"'), reqd:1 },
 				{fieldname:'domain', label: __('Domain'), fieldtype:'Select',
@@ -108,7 +109,7 @@ function load_erpnext_slides() {
 			},
 
 			bind_events: function(slide) {
-				/*slide.get_input("company_name").on("change", function() {
+				slide.get_input("company_name").on("change", function() {
 					var parts = slide.get_input("company_name").val().split(" ");
 					var abbr = $.map(parts, function(p) { return p ? p.substr(0,1) : null }).join("");
 					slide.get_field("company_abbr").set_input(abbr.slice(0, 5).toUpperCase());
@@ -120,7 +121,7 @@ function load_erpnext_slides() {
 						slide.get_field("company_abbr").set_input("");
 					}
 				});
-				*/
+
 				// TODO remove this
 				slide.get_input("fy_start_date").on("change", function() {
 					var year_end_date =
@@ -162,7 +163,7 @@ function load_erpnext_slides() {
 			fields: [],
 			before_load: function(slide) {
 				slide.fields = [];
-				for(var i=1; i<2; i++) {
+				for(var i=1; i<5; i++) {
 					slide.fields = slide.fields.concat([
 						{fieldtype:"Section Break"},
 						{fieldtype:"Data", fieldname:"user_fullname_"+ i,
@@ -212,10 +213,10 @@ function load_erpnext_slides() {
 			fields: [],
 			before_load: function(slide) {
 				slide.fields = [];
-				for(var i=1; i<2; i++) {
+				for(var i=1; i<6; i++) {
 					slide.fields = slide.fields.concat([
 						{fieldtype:"Section Break"},
-						{fieldtype:"Data", fieldname:"customer_" + i, label:__("Customer") + " " + i, default:get_url_arg('cliente'),
+						{fieldtype:"Data", fieldname:"customer_" + i, label:__("Customer") + " " + i,
 							placeholder:__("Customer Name")},
 						{fieldtype:"Column Break"},
 						{fieldtype:"Data", fieldname:"customer_contact_" + i,
@@ -235,10 +236,10 @@ function load_erpnext_slides() {
 			fields: [],
 			before_load: function(slide) {
 				slide.fields = [];
-				for(var i=1; i<2; i++) {
+				for(var i=1; i<6; i++) {
 					slide.fields = slide.fields.concat([
 						{fieldtype:"Section Break"},
-						{fieldtype:"Data", fieldname:"supplier_" + i, label:__("Supplier")+" " + i, default:get_url_arg('proveedor'),
+						{fieldtype:"Data", fieldname:"supplier_" + i, label:__("Supplier")+" " + i,
 							placeholder:__("Supplier Name")},
 						{fieldtype:"Column Break"},
 						{fieldtype:"Data", fieldname:"supplier_contact_" + i,
@@ -258,10 +259,10 @@ function load_erpnext_slides() {
 			fields: [],
 			before_load: function(slide) {
 				slide.fields = [];
-				for(var i=1; i<2; i++) {
+				for(var i=1; i<6; i++) {
 					slide.fields = slide.fields.concat([
 						{fieldtype:"Section Break", show_section_border: true},
-						{fieldtype:"Data", fieldname:"item_" + i, label:__("Item") + " " + i, default:get_url_arg('producto'),
+						{fieldtype:"Data", fieldname:"item_" + i, label:__("Item") + " " + i,
 							placeholder:__("A Product or Service")},
 						{fieldtype:"Select", label:__("Group"), fieldname:"item_group_" + i,
 							options:[__("Products"), __("Services"),
@@ -274,7 +275,7 @@ function load_erpnext_slides() {
 						{fieldtype: "Check", fieldname: "is_sales_item_" + i, label:__("We sell this Item"), default: 1},
 						{fieldtype: "Check", fieldname: "is_purchase_item_" + i, label:__("We buy this Item")},
 						{fieldtype:"Column Break"},
-						{fieldtype:"Currency", fieldname:"item_price_" + i, label:__("Rate"), default:get_url_arg('valor')},
+						{fieldtype:"Currency", fieldname:"item_price_" + i, label:__("Rate")},
 						{fieldtype:"Attach Image", fieldname:"item_img_" + i, label:__("Attach Image"), is_private: 0},
 					])
 				}
@@ -313,7 +314,7 @@ function load_erpnext_slides() {
 	};
 };
 
-frappe.wiz.on("before_load", function() {	
+frappe.wiz.on("before_load", function() {
 	load_erpnext_slides();
 	frappe.wiz.add_slide(erpnext.wiz.org);
 	frappe.wiz.add_slide(erpnext.wiz.branding);
