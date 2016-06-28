@@ -448,8 +448,6 @@ class Item(WebsiteGenerator):
 		else:
 			imagen=''
 			
-		precio=0
-		stock=0
 		categoria=self.product_category
 		segmento=self.product_segment
 		subcategoria=self.product_subcategory
@@ -477,8 +475,6 @@ class Item(WebsiteGenerator):
 		nombreProducto=	self.item_name
 		descripcion=self.description
 		imagen=frappe.db.get_value(self.doctype, self.name, "website_image")
-		precio=0
-		stock=0
 		categoria=self.product_category
 		segmento=self.product_segment
 		subcategoria=self.product_subcategory
