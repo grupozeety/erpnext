@@ -43,6 +43,9 @@ class ItemPrice(Document):
 		self.item_name, self.item_description = frappe.db.get_value("Item",
 			self.item_code, ["item_name", "description"])
 		
+	def after_insert(self):
+		self.sincronizarPrecio()
+	
 	def on_update(self):
 		self.sincronizarPrecio()
 	
