@@ -457,8 +457,6 @@ class Item(WebsiteGenerator):
 				'nombreProducto': nombreProducto,
 				'descripcion':descripcion,
 				'imagen':imagen,
-				'precio':precio, 
-				'stock':stock, 
 				'categoria':categoria,
 				'segmento':segmento,
 				'subcategoria':subcategoria
@@ -484,8 +482,6 @@ class Item(WebsiteGenerator):
 				'empresa': nombrePyme, 
 				'nombre': nombreProducto,
 				'descripcion':descripcion,
-				'precio':precio, 
-				'categoria':categoria, 
 				'segmento':segmento,
 				'subcategoria':subcategoria
 				}		
