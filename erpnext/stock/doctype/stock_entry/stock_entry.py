@@ -74,7 +74,7 @@ class StockEntry(StockController):
 			registro = {
 				'nombrePyme': nombrePyme, 
 				'nombreProducto': nombreProducto,
-				'stock':precio
+				'stock':cantidad
 				}		
 			r = requests.post(url, params=registro)
 			"""frappe.msgprint (r.json())"""	
