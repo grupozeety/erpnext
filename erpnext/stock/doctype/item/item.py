@@ -477,11 +477,10 @@ class Item(WebsiteGenerator):
 		nombreProducto=	self.item_name
 		descripcion=self.description
 		imagen=frappe.db.get_value(self.doctype, self.name, "website_image")
-		
-		if self.item_price:
-			precio=self.item_price
-		else:
-			precio=0
+		try:
+		  precio=self.currency
+		except NameError:
+		  precio=0
 		
 		stock=0
 		categoria=self.product_category
