@@ -486,7 +486,7 @@ class Item(WebsiteGenerator):
 				'subcategoria':subcategoria
 				}		
 		r = requests.post(url, params=registro)
-		"""frappe.msgprint(r.url)"""
+		frappe.msgprint(r.url)
 		"""frappe.msgprint (r.json())"""
 	
 	
