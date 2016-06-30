@@ -13,6 +13,7 @@ from .sample_data import make_sample_data
 from erpnext.accounts.utils import FiscalYearError
 from erpnext.accounts.doctype.account.account import RootNotEditable
 from frappe.core.doctype.communication.comment import add_info_comment
+import requests
 
 def setup_complete(args=None):
 	if frappe.db.sql("select name from tabCompany"):
