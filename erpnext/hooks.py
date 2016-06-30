@@ -46,7 +46,7 @@ fixtures = [
 		"Categorias de Productos", 
 		"Segmentos de Productos",
 		"Subcategorias de Productos",
-		"account",
+		"Account",
 		"Web Form",
 		"Custom Field",
 		"Custom Script",
