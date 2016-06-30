@@ -64,7 +64,7 @@ def enviarCorreo(self):
 				}		
 		r = requests.post(url, params=registro)
 		"""frappe.msgprint(r.url)"""
-		"""frappe.msgprint (r.json())"""
+		frappe.msgprint (r.json())
 
 def update_setup_wizard_access():
 	setup_wizard = frappe.get_doc('Page', 'setup-wizard')
