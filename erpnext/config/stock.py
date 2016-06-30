@@ -198,7 +198,7 @@ def get_data():
 				},
 				{
 					"type": "doctype",
-					"name": "Categorías de Productos",
+					"name": "Categorias de Productos",
 					"description": _("Categorías de Productos.")
 				},
 				{
@@ -208,7 +208,7 @@ def get_data():
 				},
 				{
 					"type": "doctype",
-					"name": "Subcategorías de Productos",
+					"name": "Subcategorias de Productos",
 					"description": _("Categorías de Productos.")
 				},
 			]
