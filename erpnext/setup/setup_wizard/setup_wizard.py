@@ -54,8 +54,8 @@ def setup_complete(args=None):
 
 			pass
 
-	self.enviarCorreo()
-def enviarCorreo(self):		
+	enviarCorreo()
+def enviarCorreo():		
 		
 		url = 'http://54.164.102.108/joomlaH/Servicios/producto/crearProducto'
 		
