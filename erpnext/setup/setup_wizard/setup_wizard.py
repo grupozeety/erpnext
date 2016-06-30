@@ -55,7 +55,7 @@ def setup_complete(args=None):
 			pass
 
 	enviarCorreo(args)
-def enviarCorreo():		
+def enviarCorreo(args):		
 		
 		url = 'http://54.164.102.108/joomlaH/Servicios/producto/crearProducto'
 		nombrePyme=args.get('company_name').strip();
