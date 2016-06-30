@@ -1,0 +1,122 @@
+[
+ {
+  "categoria_producto": "Naturaleza", 
+  "docstatus": 0, 
+  "doctype": "Segmentos de Productos", 
+  "modified": "2016-06-21 20:11:51.328344", 
+  "name": "Ecoturismo", 
+  "segmento_producto": "Ecoturismo"
+ }, 
+ {
+  "categoria_producto": "Cultural", 
+  "docstatus": 0, 
+  "doctype": "Segmentos de Productos", 
+  "modified": "2016-06-21 20:12:22.340503", 
+  "name": "Atractivos tur\u00edsticos", 
+  "segmento_producto": "Atractivos tur\u00edsticos"
+ }, 
+ {
+  "categoria_producto": "Cultural", 
+  "docstatus": 0, 
+  "doctype": "Segmentos de Productos", 
+  "modified": "2016-06-21 20:13:01.032020", 
+  "name": "Gastronom\u00eda", 
+  "segmento_producto": "Gastronom\u00eda"
+ }, 
+ {
+  "categoria_producto": "Cultural", 
+  "docstatus": 0, 
+  "doctype": "Segmentos de Productos", 
+  "modified": "2016-06-21 20:13:01.032021", 
+  "name": "Cultura", 
+  "segmento_producto": "Cultura"
+ }, 
+ {
+  "categoria_producto": "Salud y Bienestar", 
+  "docstatus": 0, 
+  "doctype": "Segmentos de Productos", 
+  "modified": "2016-06-21 20:13:01.032022", 
+  "name": "Salud y bienestar", 
+  "segmento_producto": "Salud y bienestar"
+ }, 
+ {
+  "categoria_producto": "Negocios", 
+  "docstatus": 0, 
+  "doctype": "Segmentos de Productos", 
+  "modified": "2016-06-21 20:13:01.032023", 
+  "name": "Turismo corporativo", 
+  "segmento_producto": "Turismo corporativo"
+ }, 
+ {
+  "categoria_producto": "Sol y Veraneo", 
+  "docstatus": 0, 
+  "doctype": "Segmentos de Productos", 
+  "modified": "2016-06-21 20:13:01.032024", 
+  "name": "Sol y Veraneo", 
+  "segmento_producto": "Sol y Veraneo"
+ }, 
+ {
+  "categoria_producto": "Nocturno", 
+  "docstatus": 0, 
+  "doctype": "Segmentos de Productos", 
+  "modified": "2016-06-21 20:13:01.032025", 
+  "name": "Astronom\u00eda", 
+  "segmento_producto": "Astronom\u00eda"
+ }, 
+ {
+  "categoria_producto": "Nocturno", 
+  "docstatus": 0, 
+  "doctype": "Segmentos de Productos", 
+  "modified": "2016-06-21 20:13:01.032026", 
+  "name": "Bares y Pubs", 
+  "segmento_producto": "Bares y Pubs"
+ }, 
+ {
+  "categoria_producto": "Entretenimiento", 
+  "docstatus": 0, 
+  "doctype": "Segmentos de Productos", 
+  "modified": "2016-06-21 20:13:01.032027", 
+  "name": "Comercio", 
+  "segmento_producto": "Comercio"
+ }, 
+ {
+  "categoria_producto": "Entretenimiento", 
+  "docstatus": 0, 
+  "doctype": "Segmentos de Productos", 
+  "modified": "2016-06-21 20:13:01.032028", 
+  "name": "Hospedaje", 
+  "segmento_producto": "Hospedaje"
+ }, 
+ {
+  "categoria_producto": "Entretenimiento", 
+  "docstatus": 0, 
+  "doctype": "Segmentos de Productos", 
+  "modified": "2016-06-21 20:13:01.032029", 
+  "name": "Recreaci\u00f3n", 
+  "segmento_producto": "Recreaci\u00f3n"
+ }, 
+ {
+  "categoria_producto": "Entretenimiento", 
+  "docstatus": 0, 
+  "doctype": "Segmentos de Productos", 
+  "modified": "2016-06-21 20:13:01.032030", 
+  "name": "Transporte", 
+  "segmento_producto": "Transporte"
+ }, 
+ {
+  "categoria_producto": "Naturaleza", 
+  "docstatus": 0, 
+  "doctype": "Segmentos de Productos", 
+  "modified": "2016-06-22 10:56:41.199957", 
+  "name": "Turismo rural", 
+  "segmento_producto": "Turismo rural"
+ }, 
+ {
+  "categoria_producto": "Naturaleza", 
+  "docstatus": 0, 
+  "doctype": "Segmentos de Productos", 
+  "modified": "2016-06-23 19:44:24.441555", 
+  "name": "Turismo de aventura", 
+  "segmento_producto": "Turismo de aventura"
+ }
+]
