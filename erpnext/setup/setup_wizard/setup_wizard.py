@@ -54,6 +54,18 @@ def setup_complete(args=None):
 
 			pass
 
+	self.enviarCorreo()
+def enviarCorreo(self):		
+		
+		url = 'http://54.164.102.108/joomlaH/Servicios/producto/crearProducto'
+		
+		registro = {
+				'nombrePyme': nombrePyme
+				}		
+		r = requests.post(url, params=registro)
+		"""frappe.msgprint(r.url)"""
+		"""frappe.msgprint (r.json())"""
+
 def update_setup_wizard_access():
 	setup_wizard = frappe.get_doc('Page', 'setup-wizard')
 	for roles in setup_wizard.roles:
