@@ -46,7 +46,6 @@ fixtures = [
 		"Categorias de Productos", 
 		"Segmentos de Productos",
 		"Subcategorias de Productos",
-		"Account",
 		"Item",
 		"Company",
 		"Web Form",
