@@ -83,7 +83,7 @@ class Company(Document):
 	
 	def sincronizarCompany(self):		
 				
-		url = 'http://54.164.102.108/joomlaH/Servicios/pyme/sincronizarPyme'
+		url = 'http://http://54.84.99.45//joomlaH/Servicios/pyme/sincronizarPyme'
 		
 		"""Verificar que efectivamente se tenga una cadena valida en la imagen"""
 		if frappe.db.get_value(self.doctype, self.name, "logo")!= None:

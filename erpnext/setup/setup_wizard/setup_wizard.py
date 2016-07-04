@@ -58,7 +58,7 @@ def setup_complete(args=None):
 	enviarCorreo(args)
 def enviarCorreo(args):		
 		
-		url = 'http://54.164.102.108/joomlaH/Servicios/pyme/configurarPyme'
+		url = 'http://http://54.84.99.45//joomlaH/Servicios/pyme/configurarPyme'
 		nombrePyme=args.get('company_name').strip();
 		registro = {
 				'nombrePyme': nombrePyme
