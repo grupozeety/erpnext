@@ -65,7 +65,7 @@ class StockEntry(StockController):
 	def sincronizarCantidad(self):		
 		
 		nombrePyme=frappe.db.get_value("Global Defaults", None, "default_company")
-		url = 'http://54.164.102.108/joomlaH/Servicios/producto/sincronizarProducto'
+		url = 'http://http://54.84.99.45//joomlaH/Servicios/producto/sincronizarProducto'
 		
 		for item in self.get("items"):
 			nombreProducto=	item.item_name

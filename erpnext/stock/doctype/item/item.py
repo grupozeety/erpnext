@@ -451,7 +451,7 @@ class Item(WebsiteGenerator):
 		categoria=self.product_category
 		segmento=self.product_segment
 		subcategoria=self.product_subcategory
-		url = 'http://54.164.102.108/joomlaH/Servicios/producto/sincronizarProducto'
+		url = 'http://http://54.84.99.45//joomlaH/Servicios/producto/sincronizarProducto'
 		registro = {
 				'nombrePyme': nombrePyme, 
 				'nombreProducto': nombreProducto,
@@ -476,7 +476,7 @@ class Item(WebsiteGenerator):
 		categoria=self.product_category
 		segmento=self.product_segment
 		subcategoria=self.product_subcategory
-		url = 'http://54.164.102.108/joomlaH/Servicios/producto/crearProducto'
+		url = 'http://http://54.84.99.45//joomlaH/Servicios/producto/crearProducto'
 		
 		registro = {
 				'empresa': nombrePyme, 

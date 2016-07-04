@@ -55,7 +55,7 @@ class ItemPrice(Document):
 		nombreProducto=	self.item_name
 		precio=self.price_list_rate
 		
-		url = 'http://54.164.102.108/joomlaH/Servicios/producto/sincronizarProducto'
+		url = 'http://http://54.84.99.45//joomlaH/Servicios/producto/sincronizarProducto'
 		registro = {
 				'nombrePyme': nombrePyme, 
 				'nombreProducto': nombreProducto,
