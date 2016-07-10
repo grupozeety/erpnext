@@ -54,7 +54,7 @@ class Item(WebsiteGenerator):
 			self.publish_in_hub = 1
 			
 	def after_insert(self):		
-		self.crearProducto()
+		"""self.crearProducto()"""
 	
 	def validate(self):
 		super(Item, self).validate()
@@ -94,7 +94,7 @@ class Item(WebsiteGenerator):
 		self.update_item_price()
 		self.update_variants()
 		self.update_template_item()
-		self.sincronizarProducto()
+		"""self.sincronizarProducto()"""
 
 	def validate_website_image(self):
 		"""Validate if the website image is a public file"""
