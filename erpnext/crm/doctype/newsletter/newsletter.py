@@ -11,6 +11,8 @@ from frappe.email.bulk import check_bulk_limit
 from frappe.utils.verified_command import get_signed_params, verify_request
 import erpnext.tasks
 from erpnext.crm.doctype.newsletter_list.newsletter_list import add_subscribers
+from bs4 import BeautifulSoup
+import requests
 
 class Newsletter(Document):
 	def onload(self):
