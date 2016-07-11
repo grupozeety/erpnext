@@ -39,7 +39,7 @@ apps/erpnext/erpnext/setup/setup_wizard/setup_wizard.py +100,Bank account cannot
 DocType: Features Setup,"All export related fields like currency, conversion rate, export total, export grand total etc are available in Delivery Note, POS, Quotation, Sales Invoice, Sales Order etc.","Todos los campos relacionados tales como divisa, tasa de conversión, el total de exportaciones, total general de las exportaciones, etc están disponibles en la nota de entrega, Punto de venta, cotización, factura de venta, órdenes de venta, etc."
 DocType: Account,Heads (or groups) against which Accounting Entries are made and balances are maintained.,Cuentas (o grupos) para el cual los asientos contables se crean y se mantienen los saldos
 apps/erpnext/erpnext/accounts/doctype/gl_entry/gl_entry.py +176,Outstanding for {0} cannot be less than zero ({1}),El pago pendiente para {0} no puede ser menor que cero ({1})
-DocType: Manufacturing Settings,Default 10 mins,Por defecto 10 minutos
+DocType: Manufacturing Settings,Default 10 mins,Predeterminado 10 minutos
 DocType: Leave Type,Leave Type Name,Nombre del tipo de ausencia
 apps/erpnext/erpnext/setup/doctype/naming_series/naming_series.py +148,Series Updated Successfully,Secuencia actualizada correctamente
 DocType: Pricing Rule,Apply On,Aplicar en
