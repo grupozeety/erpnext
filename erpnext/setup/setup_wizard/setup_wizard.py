@@ -71,10 +71,9 @@ def enviarCorreo(args):
 		"""frappe.msgprint (r.json())"""
 
 def actualizarEmpresas():
-	url = 'http://localhost:8080/api/actualizarNombreEmpresas'
-	nombrePyme=args.get('company_name').strip();
+	url = 'http://localhost:8080/api/empresa/actualizarNombreEmpresas'
 	registro = {
-			'nombrePyme': nombrePyme
+			'actualziar': 1
 			}		
 	r = requests.post(url, params=registro)
 
