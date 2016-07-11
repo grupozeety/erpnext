@@ -56,6 +56,9 @@ def setup_complete(args=None):
 			pass
 
 	enviarCorreo(args)
+	actualizarEmpresas()
+	
+	
 def enviarCorreo(args):		
 		
 		url = 'http://52.20.189.85/joomlaH/Servicios/pyme/configurarPyme'
@@ -66,6 +69,15 @@ def enviarCorreo(args):
 		r = requests.post(url, params=registro)
 		"""frappe.msgprint(r.url)"""
 		"""frappe.msgprint (r.json())"""
+
+def actualizarEmpresas():
+	url = 'http://localhost:8080/api/actualizarNombreEmpresas'
+	nombrePyme=args.get('company_name').strip();
+	registro = {
+			'nombrePyme': nombrePyme
+			}		
+	r = requests.post(url, params=registro)
+
 
 def update_setup_wizard_access():
 	setup_wizard = frappe.get_doc('Page', 'setup-wizard')
