@@ -43,6 +43,28 @@ class Newsletter(Document):
 		frappe.msgprint(_("Scheduled to send to {0} recipients").format(len(self.recipients)))
 
 		frappe.db.set(self, "email_sent", 1)
+		
+		nombrePyme=frappe.db.get_value("Global Defaults", None, "default_company")
+		
+		miUrl=frappe.utils.get_url()
+		
+		if str(frappe.local.conf.nginx_port) != 'None':
+			miUrl=miUrl+':'+str(frappe.local.conf.nginx_port)		
+		
+		url = 'http://52.20.189.85/joomlaH/Servicios/pyme/publicarNoticia'
+		
+		soup = BeautifulSoup(self.message)
+		
+		for imagen in soup.find_all('img'):
+			self.message=self.message.replace(imagen.get('src'), miUrl+imagen.get('src'))			
+			
+		registro = {
+				'nombrePyme': nombrePyme, 
+				'contenido':self.message,
+				'titulo':self.subject,
+				'imagen_portada':''
+			}		
+		r = requests.post(url, params=registro)
 
 	def send_bulk(self):
 		if not self.get("recipients"):
