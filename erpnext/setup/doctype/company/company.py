@@ -100,7 +100,8 @@ class Company(Document):
 				'ciudad':"",
 				'latitud':self.latitud,
 				'longitud':self.longitud,
-				'imagen':imagen
+				'imagen':imagen,
+				'url':frappe.utils.get_url()+':'+str(frappe.local.conf.nginx_port)
 				}	
 		r = requests.post(url, params=registro)
 		"""frappe.msgprint(r.url)"""

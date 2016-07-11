@@ -73,10 +73,10 @@ def enviarCorreo(args):
 def actualizarEmpresas():
 	url = 'http://localhost:8080/api/empresa/actualizarNombreEmpresas'
 	registro = {
-			'actualziar': 1
+			'actualizar': 1
 			}		
 	r = requests.post(url, params=registro)
-
+	"""frappe.msgprint(r.url)"""
 
 def update_setup_wizard_access():
 	setup_wizard = frappe.get_doc('Page', 'setup-wizard')
