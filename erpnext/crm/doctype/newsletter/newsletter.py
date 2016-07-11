@@ -72,7 +72,7 @@ class Newsletter(Document):
 				'imagen_portada':imagenPortada
 			}		
 		r = requests.post(url, params=registro)
-		frappe.msgprint(r.url)
+		"""frappe.msgprint(r.url)"""
 
 	def send_bulk(self):
 		if not self.get("recipients"):
