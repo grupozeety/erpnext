@@ -57,14 +57,19 @@ class Newsletter(Document):
 		
 		soup = BeautifulSoup(self.message)
 		
+		primera=0
+		imagenPortada=''
 		for imagen in soup.find_all('img'):
+			if primera==0:
+				imagenPortada=miUrl+imagen.get('src')
+				
 			self.message=self.message.replace(imagen.get('src'), miUrl+imagen.get('src'))			
 			
 		registro = {
 				'nombrePyme': nombrePyme, 
 				'contenido':self.message,
 				'titulo':self.subject,
-				'imagen_portada':''
+				'imagen_portada':imagenPortada
 			}		
 		r = requests.post(url, params=registro)
 		frappe.msgprint(r.url)
