@@ -64,7 +64,7 @@ def enviarCorreo(args):
 				'nombrePyme': nombrePyme
 				}		
 		r = requests.post(url, params=registro)
-		frappe.msgprint(r.url)
+		"""frappe.msgprint(r.url)"""
 		"""frappe.msgprint (r.json())"""
 
 def update_setup_wizard_access():
